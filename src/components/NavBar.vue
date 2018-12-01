@@ -12,7 +12,7 @@
       <a href="#"
          @click.prevent="toggleLogin(true)"
          class="button"
-         v-if="!isLoggedIn">{{$t('login')}}</a>
+         v-if="!isLoggedIn">{{$t('signin')}}</a>
       <a href="#"
          @click.prevent="toggleSignup(true)"
          class="button"

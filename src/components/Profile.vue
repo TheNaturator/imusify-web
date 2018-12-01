@@ -1,7 +1,7 @@
 <template>
   <section class="profile">
     <div class="body">
-      <h1 class="heading">Complete your profile</h1>
+      <h1 class="heading">{{$t('profileCompleteYourProfile')}}</h1>
       <div class="two-column">
         <div class="left-sec">
           <img src="../assets/logo.png" />
@@ -9,57 +9,58 @@
             <span class="icon-svg upload">
               <icon name="imageUpload" />
             </span>
-            upload image
+            {{$t('profileUploadImage')}}
           </button>
         </div>
         <div class="right-sec">
           <form @submit.prevent="onUpdateAccount">
             <div class="form-group">
-              <label class="control-label">First name</label>
+              <label class="control-label">{{$t('profileFirstName')}}</label>
               <input type="text"
                      class="form-control"
                      v-model="user.first_name"
-                     placeholder="Enter First name">
+                     :placeholder="$t('profileFirstNamePlaceholder')">
             </div>
             <div class="form-group">
-              <label class="control-label">Last name</label>
+              <label class="control-label">{{$t('profileLastName')}}</label>
               <input type="text"
                      class="form-control"
                      v-model="user.last_name"
-                     placeholder="Enter Last name">
+                     :placeholder="$t('profileLastNamePlaceholder')">
             </div>
             <div class="form-group">
-              <label class="control-label">Wallet Address</label>
+              <label class="control-label">{{$t('profileWalletAddress')}}</label>
               <input type="text"
                      class="form-control"
                      v-model="user.wallet_address"
-                     placeholder="Enter wallet address">
+                     :placeholder="$t('profileWalletAddressPlaceholder')">
             </div>
             <div class="form-group">
-              <label class="control-label">Date of birth</label>
+              <label class="control-label">{{$t('profileDateOfBirth')}}</label>
               <input type="text"
                      class="form-control"
                      v-model="user.date_of_birth"
-                     placeholder="_/_/_">
+                     :placeholder="$t('profileDateOfBirthPlaceholder')">
             </div>
             <div class="form-group">
-              <label class="control-label">Biography</label>
+              <label class="control-label">{{$t('profileBiography')}}</label>
               <textarea id="biography"
                         class="form-control"
                         v-model="user.bio"
-                        placeholder="Enter biography" style="resize:none"></textarea>
+                        :placeholder="$t('profileBiographyPlaceholder')"
+                        style="resize:none"></textarea>
             </div>
             <div class="form-group">
-              <label class="control-label">Gender</label>
+              <label class="control-label">{{$t('profileGender')}}</label>
               <select class="form-control" v-model="user.gender">
-                <option value="" selected>Select Gender</option>
-                <option value="M">Male</option>
-                <option value="F">Female</option>
-                <option value="U">Decline to state</option>
+                <option value="" selected>{{$t('profileSelectGender')}}</option>
+                <option value="M">{{$t('male')}}</option>
+                <option value="F">{{$t('female')}}</option>
+                <option value="U">{{$t('profileDeclineToState')}}</option>
               </select>
             </div>
             <div class="cta left">
-              <button class="savebutton">SAVE SETTINGS</button>
+              <button class="savebutton">{{$t('profileSaveSettings')}}</button>
             </div>
           </form>
         </div>
@@ -121,6 +122,9 @@ export default {
           border: none;
         }
       }
+    }
+    .savebutton {
+      text-transform: uppercase;
     }
   }
 </style>

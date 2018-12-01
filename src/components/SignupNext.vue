@@ -1,14 +1,12 @@
 <template>
   <section class="signupnext">
     <div class="body">
-      <h1 class="heading">Please complete your registration {{credentials.email}}</h1>
-      <p class="subheading">In a consequat mi. Etiam sit amet diam in diam ullamcorper
-        consequat. Maecenas pellentesque mauris augue, in scelerisque lectus imperdiet et.
-        Nullam ultricies, eros quis maximus.
+      <h1 class="heading">{{$t('signUpNextCompleteRegistration')}} {{credentials.email}}</h1>
+      <p class="subheading">{{$t('signUpNextCompleteRegistrationSubheader')}}
       </p>
       <form @submit.prevent="onSubmit()">
         <div class="form-group">
-          <label class="control-label">Email Address</label>
+          <label class="control-label">{{$t('emailAddress')}}</label>
           <input type="text"
                  id="username"
                  placeholder="example@email.com"
@@ -16,18 +14,18 @@
                  v-model="credentials.username">
         </div>
         <div class="form-group">
-          <label class="control-label">Password</label>
+          <label class="control-label">{{$t('password')}}</label>
           <input type="text"
                  id="password"
-                 placeholder="Enter your password"
+                 :placeholder="$t('passwordPlaceholder')"
                  class="form-control"
                  v-model="credentials.password">
         </div>
         <div class="form-group">
-          <label class="control-label">Repeat Password</label>
+          <label class="control-label">{{$t('passwordRepeat')}}</label>
           <input type="text"
                  id="passwordConfirm"
-                 placeholder="Retype your password"
+                 :placeholder="$t('passwordRepeatPlaceholder')"
                  class="form-control"
                  v-model="credentials.confirmPassword">
         </div>
@@ -35,9 +33,7 @@
           <div class="checkbox long-text">
             <label>
               <input class="checkbox" type="checkbox"/>
-              <span></span>
-              I acknowledge that I have read and accept the Terms of Use Agreement
-              and consent to the Privacy Policy and Video Privacy Policy.</label>
+              <span></span>{{$t('signUpNextTermsOfUse')}}</label>
           </div>
         </div>
         <div class="form-group">
@@ -45,11 +41,11 @@
             <label>
               <input class="checkbox2" type="checkbox"/>
               <span></span>
-              Subscribe to our Newsletter</label>
+              {{$t('signUpNextSubscribe')}}</label>
           </div>
         </div>
         <div class="cta left">
-          <button class="subbutton">SIGN UP</button>
+          <button class="subbutton">{{$t('signup')}}</button>
         </div>
       </form>
     </div>
@@ -116,6 +112,9 @@ export default {
     .cta {
       margin-top: 4rem;
     }
+  }
+  .subbutton {
+    text-transform: uppercase;
   }
 }
 </style>

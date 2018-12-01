@@ -2,10 +2,10 @@
   <div class="toggler">
     <router-link to="/"
                  class="button"
-                :class="{ active: selected === 'tracks' }">Tracks</router-link>
+                :class="{ active: selected === 'tracks' }">{{$t('tracks')}}</router-link>
     <router-link to="/artists"
                  class="button"
-                 :class="{ active: selected === 'artists' }">Artists</router-link>
+                 :class="{ active: selected === 'artists' }">{{$t('artists')}}</router-link>
   </div>
 </template>
 <script>

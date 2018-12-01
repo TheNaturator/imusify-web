@@ -4,34 +4,32 @@
       <Icon name="close" />
     </a>
     <div class="body">
-      <h1 class="heading">Sign in to imusify</h1>
-      <p class="subheading">In a consequat mi. Etiam sit amet diam in diam ullamcorper consequat.
-        Maecenas pellentesque mauris augue, in scelerisque lectus imperdiet et. Nullam ultricies,
-        eros quis maximus.
+      <h1 class="heading">{{$t('signInToImusify')}}</h1>
+      <p class="subheading">{{$t('signIntoImusifySubHeader')}}
       </p>
       <social-icons v-if="false"></social-icons>
       <div class="or-ui" v-if="false"><span>OR</span></div>
       <div>
         <form @submit.prevent="onSubmit()">
           <div class="form-group">
-            <label class="control-label">Email address</label>
+            <label class="control-label">{{$t('emailAddress')}}</label>
             <input type="text" id="email" class="form-control"
-              placeholder="email@example.com" v-model="credentials.email">
+              :placeholder="$t('emailAddressPlaceholder')" v-model="credentials.email">
           </div>
           <div class="form-group">
-            <label class="control-label">Password</label>
+            <label class="control-label">{{$t('password')}}</label>
             <input type="password" id="password" class="form-control"
-              placeholder="Enter your password" v-model="credentials.password">
+              :placeholder="$t('passwordPlaceholder')" v-model="credentials.password">
           </div>
           <div class="form-group">
             <div class="checkbox">
-              <label><input type="checkbox"/> <span></span> Keep me signed in</label>
+              <label><input type="checkbox"/> <span></span> {{$t('loginKeepMeSignedIn')}}</label>
             </div>
           </div>
           <div class="cta dubble">
-            <button>Login</button>
+            <button>{{$t('login')}}</button>
             <button type="button"
-                    @click="openSignupModal()">Signup</button>
+                    @click="openSignupModal()">{{$t('signup')}}</button>
           </div>
         </form>
       </div>

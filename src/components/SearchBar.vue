@@ -2,7 +2,7 @@
   <form class="search-bar"
         @submit.prevent="search()">
     <input type="text"
-           placeholder="Search"
+           :placeholder="$t('search')"
            v-model="filter" />
     <button>
       <icon name="magnify" />

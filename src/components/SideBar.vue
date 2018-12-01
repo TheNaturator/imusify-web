@@ -5,56 +5,56 @@
       <li>
         <router-link to="/">
           <icon name="home"/>
-          <span>Home</span>
+          <span>{{$t('sideBarHome')}}</span>
         </router-link>
       </li>
       <li>
         <router-link to="/channels">
           <icon name="channels"/>
-          <span>Channels</span>
+          <span>{{$t('sideBarChannels')}}</span>
         </router-link>
       </li>
       <li>
         <router-link to="/browse">
           <icon name="browse"/>
-          <span>Browse</span>
+          <span>{{$t('sideBarBrowse')}}</span>
         </router-link>
       </li>
       <li>
         <router-link to="/crowdfunding">
           <icon name="crowdfunding"/>
-          <span>Crowd Funding</span>
+          <span>{{$t('sideBarCrowdFunding')}}</span>
         </router-link>
       </li>
       <li>
         <router-link to="/upload">
           <icon name="upload"/>
-          <span>Upload</span>
+          <span>{{$t('sideBarUpload')}}</span>
         </router-link>
       </li>
       <li>
         <router-link to="/wallet">
           <icon name="wallet"/>
-          <span>Wallet</span>
+          <span>{{$t('sideBarWallet')}}</span>
         </router-link>
       </li>
       <li>
         <router-link to="/following">
           <icon name="following"/>
-          <span>Following</span>
+          <span>{{$t('sideBarFollowing')}}</span>
         </router-link>
       </li>
     </ul>
     <footer>
       <nav>
-        <router-link to="/about">About</router-link>
+        <router-link to="/about">{{$t('sideBarAbout')}}</router-link>
         |
-        <router-link to="/privacy">Privacy Policy</router-link>
+        <router-link to="/privacy">{{$t('sideBarPrivacyPolicy')}}</router-link>
         |
-        <router-link to="/legal">Legal</router-link>
+        <router-link to="/legal">{{$t('sideBarLegal')}}</router-link>
       </nav>
-      <p>Copyright © 2018 imusify</p>
-      <p>All rights reserved</p>
+      <p>{{$t('sideBarCopyright')}}</p>
+      <p>{{$t('sideBarAllRightsReserved')}}</p>
     </footer>
   </nav>
 </template>
